@@ -50,13 +50,13 @@ micronaut {
         optimizeNetty.set(true)
     }
     openapi {
-        server(file("src/main/resources/discriminatornotnullbug.yml")) {
+        server(file("src/main/resources/modelwithdiscriminator.yml.yml")) {
             apiPackageName = "com.example.openapi.server.api"
             modelPackageName = "com.example.openapi.server.model"
             useReactive = false
         }
 
-        client(file("src/main/resources/discriminatornotnullbug.yml")) {
+        client(file("src/main/resources/modelwithdiscriminator.yml.yml")) {
             apiPackageName = "com.example.openapi.client.api"
             modelPackageName = "com.example.openapi.client.model"
             useReactive = false
