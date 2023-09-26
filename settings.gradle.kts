@@ -1,3 +1,3 @@
 
-rootProject.name="mn-discriminator-not-null-bug"
+rootProject.name="mn-discriminator-null-serde-bug"
 
