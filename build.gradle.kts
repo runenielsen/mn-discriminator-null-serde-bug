@@ -78,7 +78,6 @@ tasks {
             )
             file.writeText(updatedContent)
         }
-        // End of temporary fix.
     }
 }
 */
