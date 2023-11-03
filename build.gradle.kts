@@ -64,5 +64,21 @@ micronaut {
     }
 }
 
-
-
+/* Comment this in to run with the visible property set to true as in the generated models for Jackson.
+tasks {
+    named("generateServerOpenApiModels") {
+        doLast {
+            val file = layout.buildDirectory.file("generated/openapi/generateServerOpenApiModels/src/main/java/com/example/openapi/server/model/BookInfo.java").get().asFile
+            val content = file.readText()
+            val updatedContent = content.replaceFirst(
+                """@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
+""",
+                """@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type", visible = true)
+"""
+            )
+            file.writeText(updatedContent)
+        }
+        // End of temporary fix.
+    }
+}
+*/
